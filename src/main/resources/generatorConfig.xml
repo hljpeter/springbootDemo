@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration
+	PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+	"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="C:\Users\Linus\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+
+	<!-- 配置详情 -->
+	<context id="mySQLTables" targetRuntime="MyBatis3">
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="false" />
+			<property name="suppressDate" value="true" />
+		</commentGenerator>
+		<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/IPP?useUnicode=true&amp;characterEncoding=utf8&amp;useSSL=false" userId="ipp"
+			password="ipp">
+		</jdbcConnection>
+
+		<javaModelGenerator targetPackage="com.example.demo.model"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator targetPackage="mybatis"
+			targetProject="src/main/resources">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.example.demo.mapper"
+			targetProject="src/main/java">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+
+		<!-- tableName:用于自动生成代码的数据库表；domainObjectName:对应于数据库表的javaBean类名 -->
+	
+		
+		<table schema="ipp"   tableName="MARKETING_CAMPAIGN_ACTIVE"
+			domainObjectName="MarketingCampaignActive"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="ipp"   tableName="MARKETING_CAMPAIGN_DEF"
+			domainObjectName="MarketingCampaignDef"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<!-- <table schema="ipp"   tableName="sales_goods_line"
+			domainObjectName="SalesGoodsLine"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="SYS_ROLES"
+			domainObjectName="SysRoles"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="SYS_USER_POS_MAP"
+			domainObjectName="SysUserPosMap"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PAY_PAYMENT"
+			domainObjectName="PayPayment"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PAY_AUTH_INFO"
+			domainObjectName="PayAuthInfo"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="ADM_CODE_DETAIL"
+			domainObjectName="AdmCodeDetail"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"   tableName="SYS_BRANCHES"
+			domainObjectName="SysBranches"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="SYS_ADM_USERS"
+			domainObjectName="SysAdmUsers"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"   tableName="SYS_MENUS"
+			domainObjectName="SysMenus"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="SYS_MENUS_PROGS"
+			domainObjectName="SysMenusProgs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="SYS_ROLE_MENU_MAP"
+			domainObjectName="SysRoleMenuMap"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		 <table schema="cdfex_new"   tableName="CUSTOMERS"
+			domainObjectName="Customers"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		 <table schema="cdfex_new"   tableName="PRO_ISSUERS_LOGS"
+			domainObjectName="ProIssuersLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		 <table schema="cdfex_new"   tableName="PRO_PFCATS"
+			domainObjectName="ProPfats"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PRO_PFCAT_ISSUER_MAP"
+			domainObjectName="ProPfatsIssuerMap"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PRO_PFCAT_ISSUER_MAP_LOGS"
+			domainObjectName="ProPfatsIssuerMapLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"  tableName="SYS_COMPANY_INFO"
+			domainObjectName="SysCompanyInfo"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"  tableName="SYS_COMPANY_INFO_LOGS"
+			domainObjectName="SysCompanyInfoLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"   tableName="PRO_ISSUERS"
+			domainObjectName="ProIssuers"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"   tableName="PRO_PUBLISHER"
+			domainObjectName="ProPublisher"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+	
+		<table schema="cdfex_new"   tableName="PRO_PFCAT_PUBLISHER_MAP"
+			domainObjectName="ProPfcatPublisherMap"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PRO_PFCAT_PUBLISHER_MAP_LOGS"
+			domainObjectName="ProPfcatPublisherMapLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex_new"   tableName="PAY_BANK_LIST"
+			domainObjectName="PayBankList"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex_new"   tableName="PRO_PUBLISHER_LOGS"
+			domainObjectName="ProPublisherLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex1"   tableName="CUS_SUMMARIS_LOGS"
+			domainObjectName="CusSummariesLogs"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex1"   tableName="CUS_PORTFOLIO"
+			domainObjectName="CusPortfolio"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex1"   tableName="CUS_TRANS_TSF"
+			domainObjectName="CusTransTransfer"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex1"   tableName="PRO_INFO"
+			domainObjectName="ProInfo"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		<table schema="cdfex1"   tableName="PRO_FILES"
+			domainObjectName="ProFiles"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex1"   tableName="CUS_TRANS"
+			domainObjectName="CusTrans"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		
+		<table schema="cdfex1"   tableName="WOB_MESSAGES"
+			domainObjectName="WobMessages"
+			enableCountByExample="true" enableDeleteByExample="true"
+			enableSelectByExample="true" enableUpdateByExample="true" >
+			<property name="useActualColumnNames" value="false" />
+		</table>
+		-->
+	</context>
+</generatorConfiguration>
